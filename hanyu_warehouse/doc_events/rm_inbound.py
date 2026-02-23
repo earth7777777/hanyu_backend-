@@ -51,7 +51,7 @@ def _weight_audit(doc):
     if diff_ratio > 0.01:
         warning = "[系统预警] 实收吨数与袋数换算偏差超过 1%"
         if warning not in remark:
-            doc["f11"] = (remark + ("\n" if remark else "") + warning).strip()
+            doc.f11 = (remark + ("\n" if remark else "") + warning).strip()
 
 
 def _get_bag_weight_kg(material_name: str) -> float:

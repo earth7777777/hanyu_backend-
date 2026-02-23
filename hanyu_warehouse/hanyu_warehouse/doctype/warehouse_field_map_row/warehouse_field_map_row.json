@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-23 13:03:44.724570",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target_field",
+  "label_cn",
+  "fieldtype",
+  "options",
+  "required"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_field",
+   "fieldtype": "Data",
+   "label": "\u76ee\u6807\u5b57\u6bb5"
+  },
+  {
+   "fieldname": "label_cn",
+   "fieldtype": "Data",
+   "label": "\u4e2d\u6587\u6807\u7b7e"
+  },
+  {
+   "fieldname": "fieldtype",
+   "fieldtype": "Select",
+   "label": "\u5b57\u6bb5\u7c7b\u578b",
+   "options": "Data\nLink\nSelect\nCheck"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Data",
+   "label": "\u9009\u9879/\u6307\u5411"
+  },
+  {
+   "default": "0",
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "\u5fc5\u586b"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-23 13:18:22.854854",
+ "modified_by": "Administrator",
+ "module": "Hanyu Warehouse",
+ "name": "Warehouse Field Map Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
