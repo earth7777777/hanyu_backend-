@@ -106,7 +106,7 @@ def _evidence_lock(doc):
     - 若 f09(签收照片/receipt_photo) 为空，则必须填写 f10(exception_reason)
     """
     receipt_photo = doc.get("f09")
-    exception_reason = str(doc.get("f10") or "").strip()
+    exception_reason = (doc.get("f10") or "").strip()
 
     if receipt_photo:
         return
