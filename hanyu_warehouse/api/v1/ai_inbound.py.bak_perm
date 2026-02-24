@@ -50,7 +50,7 @@ def create_rm_inbound_draft(payload=None):
     # 强制提醒：B2 草稿也会跑 validate（五把锁会拦截）
     # 所以：没照片时必须给 f10(异常说明) 一个占位说明，否则证据锁会拦截
     doc = frappe.get_doc(doc_dict)
-    doc.insert(ignore_permissions=True)  # docstatus=0 草稿，不 submit
+    doc.insert()  # docstatus=0 草稿，不 submit
 
     return {
         "ok": True,
