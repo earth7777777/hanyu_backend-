@@ -4,7 +4,7 @@ import json
 import frappe
 
 # 这个接口：AI 传 JSON -> 系统生成 RM Inbound 草稿（docstatus=0）-> 返回单据号
-@frappe.whitelist(allow_guest=True, methods=["POST"])
+@frappe.whitelist(allow_guest=False, methods=["POST"])
 def create_rm_inbound_draft(payload=None):
     # 只允许 POST
     if frappe.request.method != "POST":
