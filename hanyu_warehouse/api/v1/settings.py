@@ -25,6 +25,7 @@ def get_rm_inbound_shadow_schema():
     return {"enabled": True, "doctype": "RM Inbound", "fields": fields}
 
 @frappe.whitelist(allow_guest=True)
+# DEBUG ONLY: keep for Stage4/5 troubleshooting; tighten auth before public deployment
 def get_allow_ai_inbound():
     doc = frappe.get_single("Warehouse Settings")
     return {"allow_ai_inbound": int(getattr(doc, "allow_ai_inbound", 0))}
