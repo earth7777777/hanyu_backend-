@@ -252,3 +252,9 @@ doc_events = {
         "validate": "hanyu_warehouse.doc_events.rm_inbound.validate_rm_inbound"
     }
 }
+
+# Stage 4: Override whitelisted methods (enable stable API entrypoints)
+override_whitelisted_methods = {
+    # Vision processor (receipt photo -> stable JSON)
+    "hanyu_warehouse.api.v1.vision_processor.process_receipt_photo": "hanyu_warehouse.api.v1.vision_processor.process_receipt_photo",
+}
