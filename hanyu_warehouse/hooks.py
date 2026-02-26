@@ -257,4 +257,5 @@ doc_events = {
 override_whitelisted_methods = {
     # Vision processor (receipt photo -> stable JSON)
     "hanyu_warehouse.api.v1.vision_processor.process_receipt_photo": "hanyu_warehouse.api.v1.vision_processor.process_receipt_photo",
+    "hanyu_warehouse.api.v1.vision_to_draft.create_rm_inbound_draft_from_receipt": "hanyu_warehouse.api.v1.vision_to_draft.create_rm_inbound_draft_from_receipt",
 }
