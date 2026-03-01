@@ -260,4 +260,4 @@ override_whitelisted_methods = {
     "hanyu_warehouse.api.v1.vision_to_draft.create_rm_inbound_draft_from_receipt": "hanyu_warehouse.api.v1.vision_to_draft.create_rm_inbound_draft_from_receipt",
     # Settings bridge (PWA entry URL)
     "hanyu_warehouse.api.v1.settings.get_pwa_entry_url": "hanyu_warehouse.api.v1.settings.get_pwa_entry_url",
-	}
+}
