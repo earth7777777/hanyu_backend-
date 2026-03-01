@@ -29,3 +29,10 @@ def get_rm_inbound_shadow_schema():
 def get_allow_ai_inbound():
     doc = frappe.get_single("Warehouse Settings")
     return {"allow_ai_inbound": int(getattr(doc, "allow_ai_inbound", 0))}
+
+@frappe.whitelist(allow_guest=True)
+def get_pwa_entry_url():
+    return {
+        "ok": True,
+        "url": frappe.utils.get_url() + "/files/pwa/index.html"
+    }
