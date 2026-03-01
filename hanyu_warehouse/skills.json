@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Add_Pellet_Inbound_Draft",
+    "description": "塑料颗粒原材料入库（草稿）。用于OCR/人工识别后写入草稿单。必须通过后端逻辑锁校验；若不传照片，必须填写 exception_reason。",
+    "endpoint": "/api/method/hanyu_warehouse.api.v1.ai_inbound.create_rm_inbound_draft",
+    "method": "POST",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "invoice_no": { "type": "string", "description": "单据编号（必须唯一）" },
+        "supplier": { "type": "string", "description": "供应商名称（必须是系统里已存在的 Supplier.name）" },
+        "net_weight_tons": { "type": "number", "description": "法定重量（吨）" },
+        "package_quantity": { "type": "integer", "description": "包装袋数" },
+        "location_id": { "type": "string", "description": "库位（必须是系统里已存在的 Warehouse Location.name）" },
+        "receipt_photo": { "type": "string", "description": "送货单照片（文件路径或文件标识）" },
+        "exception_reason": { "type": "string", "description": "未拍照理由（当 receipt_photo 为空时必填）" }
+      },
+      "required": ["invoice_no", "supplier", "net_weight_tons", "location_id"]
+    },
+    "returns": {
+      "type": "object",
+      "properties": {
+        "ok": { "type": "boolean" },
+        "name": { "type": "string", "description": "生成的入库单号，如 RM-IN-2026-0003" },
+        "docstatus": { "type": "integer", "description": "0=草稿 1=已提交" }
+      }
+    }
+  }
+]
